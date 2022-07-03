@@ -12,7 +12,7 @@ public class Jogo extends javax.swing.JFrame {
 
     public boolean jogadorX = true; //jogador 1
     public boolean jogadorO = true; //jogador 2
-    public int contadorPosicao = 0;
+    public int contadorPosicao;
     public int i,j;
     int op;
     public String linha1, linha2, linha3;
@@ -49,61 +49,72 @@ public class Jogo extends javax.swing.JFrame {
         visor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Jogo da Velha");
 
+        botao1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao1ActionPerformed(evt);
             }
         });
 
+        botao2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao2ActionPerformed(evt);
             }
         });
 
+        botao3.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao3ActionPerformed(evt);
             }
         });
 
+        botao4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao4ActionPerformed(evt);
             }
         });
 
+        botao5.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao5ActionPerformed(evt);
             }
         });
 
+        botao6.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao6ActionPerformed(evt);
             }
         });
 
+        botao9.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao9ActionPerformed(evt);
             }
         });
 
+        botao7.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao7ActionPerformed(evt);
             }
         });
 
+        botao8.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         botao8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao8ActionPerformed(evt);
             }
         });
 
+        botaoReiniciar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botaoReiniciar.setText("Reiniciar");
         botaoReiniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +122,7 @@ public class Jogo extends javax.swing.JFrame {
             }
         });
 
+        visor.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         visor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -395,7 +407,6 @@ public class Jogo extends javax.swing.JFrame {
             for(j = 0; j < 3; j++){
                 if (posicaoVet[i][j] == "x" || posicaoVet[i][j] == "o"){
                     contadorPosicao+=1;
-                    System.out.println(contadorPosicao);
                 }
             }
         }
